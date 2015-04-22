@@ -20,37 +20,26 @@ filetype off
 syntax on
 
 " Vundle stuff
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Make windows use ~/.vim too, I don't want to use _vimfiles
+if has('win32') || has('win64')
+  set rtp+=~/vimfiles/bundle/Vundle.vim
+  call vundle#begin('~/vimfiles/bundle')
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+endif
 
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'nelstrom/vim-qargs.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-cucumber.git'
-Bundle 'tpope/vim-haml.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'scrooloose/nerdcommenter.git'
-Bundle 'mileszs/ack.vim.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'pangloss/vim-javascript.git'
-Bundle 'plasticboy/vim-markdown.git'
-Bundle 'tpope/vim-unimpaired.git'
-Bundle 'tpope/vim-rake.git'
-Bundle 'tpope/vim-rails.git'
-Bundle 'godlygeek/tabular.git'
-Bundle 'ervandew/supertab.git'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'msanders/snipmate.vim.git'
-Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'Lokaltog/vim-powerline.git'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'kien/ctrlp.vim'
-Bundle 'benmills/vimux'
-Bundle 'skalnik/vim-vroom'
+Plugin 'gmarik/Vundle.vim'
 
+Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'pangloss/vim-javascript.git'
+Plugin 'godlygeek/tabular.git'
+Plugin 'msanders/snipmate.vim.git'
+Plugin 'tpope/vim-sensible'
+
+call vundle#end()
 filetype plugin indent on
 
 " Source initialization files
