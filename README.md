@@ -1,17 +1,19 @@
 # vimfiles
 
-Portable vim configuration
+Portable vim configuration from Manuel Santos
 
 ## Install
+
+For windows change `.vim` form `vimfiles` accordingly.
 ```
-git clone git://github.com/fsproru/vimfiles ~/.vimfiles
-cd ~/.vimfiles
+git clone git://github.com/undo76/vimfiles ~/.vim
+cd ~/vimfiles
 ./install.sh
 ```
 
 ## Uninstall
 ```
-cd ~/.vimfiles
+cd ~/.vim
 ./uninstall.sh
 ```
 
