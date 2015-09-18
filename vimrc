@@ -31,13 +31,22 @@ endif
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'tpope/vim-repeat'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'pangloss/vim-javascript.git'
+Plugin 'moll/vim-node.git'
 Plugin 'godlygeek/tabular.git'
-Plugin 'msanders/snipmate.vim.git'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-ragtag'
+Plugin 'mxw/vim-jsx.git'
+Plugin 'kien/ctrlp.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 filetype plugin indent on

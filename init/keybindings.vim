@@ -9,11 +9,21 @@ map Y           y$
 map <leader>/   <plug>NERDCommenterToggle
 
 " clear search highlighting
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nmap <silent> <C-l> :<C-u>set hlsearch!<CR>
 
 " Open NERDTree
-map <silent> <leader>n   :NERDTreeToggle<CR>
+map <silent> <leader>N   :NERDTreeToggle<CR>
 
 " Open NERDTreeFind
-map <silent> <leader>N   :NERDTreeFind<CR>
+map <silent> <leader>n   :NERDTreeFind<CR>
 
+" Quick word replacement
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
+" Map jj in insert mode to return to normal.
+inoremap jj <ESC>
+
+" Tabularize mappings
+map <Leader>tt  :Tabularize /
+map <Leader>t=  :Tabularize /=<CR>
+map <Leader>t:  :Tabularize /:<CR>

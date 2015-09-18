@@ -1,8 +1,16 @@
 " GUI Options
-  set guifont=Inconsolata:h24
-  set guioptions-=T               " Remove GUI toolbar
-  set guioptions-=e               " Use text tab bar, not GUI
-  set guioptions-=rL              " Remove scrollbars
+  if has("gui_running")
+    if has("gui_gtk2")
+      set guifont=Inconsolata\ 12
+    elseif has("gui_macvim")
+      set guifont=Menlo\ Regular:h14
+    elseif has("gui_win32")
+      set guifont=Consolas:h11:cANSI
+    endif
+    set guioptions-=T               " Remove GUI toolbar
+    set guioptions-=e               " Use text tab bar, not GUI
+    set guioptions-=rL              " Remove scrollbars
+  endif
 
 " General Options
   set backspace=indent,eol,start " Let backspace work over anything.
