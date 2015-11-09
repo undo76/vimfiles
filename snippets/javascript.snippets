@@ -3,6 +3,21 @@ snippet req
 	${0}
 snippet req2
 	${1:module}: require('./$1'),
+snippet req3
+	let { ${1} } = require('${2}');
+	${0}
+snippet reqall
+	let React             = require('react');
+	let { connect }       = require('react-redux');
+	let bs                = require('react-bootstrap');
+	let { LinkContainer } = require('react-router-bootstrap');
+	let { 
+		${1}
+	} = require('./actions');
+	let {
+		${2}
+	} = require('./components');
+
 snippet comp
 	let ${1:component} = React.createClass({
 		propTypes: {
@@ -18,6 +33,21 @@ snippet comp
 	});
 
 	module.exports = $1;
+
+snippet msp
+	function mapStateToProps(state) {
+		return {
+		  ${1:} : state.$1,${0}
+		};
+	}
+	
+snippet mdp
+	function mapDispatchToProps(dispatch) {
+		return {
+			${1:actions}: bindActionCreators($1, dispatch)${0}
+		};
+	}
+	
 snippet cs
 	let cx = React.addons.classSet;
 snippet cdm

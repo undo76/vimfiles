@@ -41,14 +41,17 @@ Plugin 'godlygeek/tabular.git'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-ragtag'
-Plugin 'mxw/vim-jsx.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+Plugin 'mxw/vim-jsx.git'
+Plugin 'junegunn/goyo.vim'
+Plugin 'reedes/vim-pencil'
 
 call vundle#end()
+
 filetype plugin indent on
 
 " Source initialization files
